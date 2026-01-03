@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	 <IncludeNativeLiberariesForSelfExtract>true</IncludeNativeLiberariesForSelfExtract>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Update="appsetting.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Core\Constants\" />
+		<Folder Include="Core\Models\" />
+		
+		<Folder Include="Data\Context\" />
+		<Folder Include="Data\Repositories\" />
+		<Folder Include="UI\Assets\" />
+		<Folder Include="UI\Assets\Images" />
+		<Folder Include="UI\Assets\Fonts" />
+		<Folder Include="UI\Assets\Images\Logo" />
+		<Folder Include="UI\Assets\Images\Icons" />
+
+		<Folder Include="Services\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="UI\Assets\**\*.*" />
+	</ItemGroup>
+	
+</Project>
